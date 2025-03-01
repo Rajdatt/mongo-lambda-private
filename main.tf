@@ -69,6 +69,7 @@ resource "aws_instance" "mongo_ec2" {
   instance_type   = "t2.micro"
   subnet_id       = aws_subnet.private_subnet_1.id
   security_groups = [aws_security_group.mongo_sg.id]
+  key_name      = "your-key-pair" # Add key pair
 
   user_data = <<-EOF
               #!/bin/bash
