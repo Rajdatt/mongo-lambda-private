@@ -65,7 +65,7 @@ resource "aws_iam_role_policy_attachment" "lambda_vpc_policy" {
 
 # ---------------------- EC2 Instance for MongoDB ----------------------
 resource "aws_instance" "mongo_ec2" {
-  ami             = "ami-0c55b159cbfafe1f0"  # Amazon Linux 2 AMI (Check for latest)
+  ami             = "ami-05b10e08d247fb927"  # Amazon Linux 2 AMI (Check for latest)
   instance_type   = "t2.micro"
   subnet_id       = aws_subnet.private_subnet_1.id
   security_groups = [aws_security_group.mongo_sg.id]
